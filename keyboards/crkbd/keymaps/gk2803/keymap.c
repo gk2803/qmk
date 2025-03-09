@@ -21,13 +21,11 @@ https://docs.qmk.fm/feature_layers
 
 
 
-     
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 {
      [_BASE] = LAYOUT_split_3x6_3_ex2(
   //,-------------------------------------------------------------.           ,-----------------------------------------------------------.
-     KC_TAB,     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_T,           KC_PGUP,       KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,    KC_BSPC,
+     KC_ESC,     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_CAPS,           KC_PGUP,       KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,    KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                            |--------+--------+--------+--------+--------+--------|
      KC_TAB ,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_T,           KC_PGDN,         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                            |--------+--------+--------+--------+--------+--------|
@@ -42,9 +40,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
   //,-------------------------------------------------------------.            ,-------------------------------------------------------------.
        KC_TAB,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,   KC_T,            KC_T,        KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                            |--------+--------+--------+--------+--------+--------|
-       KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   KC_T,            KC_T,     XXXXXXX, XXXXXXX, KC_UP,  XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_LCTL, KC_LBRC, KC_RBRC, KC_LPRN, KC_RPRN, KC_PIPE,   KC_T,            KC_T,     XXXXXXX, XXXXXXX, KC_UP,  XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                            |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                              XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
+      KC_LSFT, XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, KC_BSLS,                              XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|          |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, _______,  KC_SPC,           KC_ENT,   MO(3), KC_RALT
                                       //`--------------------------'          `--------------------------'
@@ -61,6 +59,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                                           KC_LGUI,   MO(3),  KC_SPC,           KC_ENT, _______, KC_RALT
                                       //`--------------------------'          `--------------------------'
   ),
+    
+    /* https://docs.qmk.fm/feature_advanced_keycodes */
 
     [_WM] = LAYOUT_split_3x6_3_ex2(
   //,-------------------------------------------------------------.            ,------------------------------------------------------------.
