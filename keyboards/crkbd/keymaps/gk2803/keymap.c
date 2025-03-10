@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
   //|--------+--------+--------+--------+--------+--------|                            |--------+--------+--------+--------+--------+--------|
      my_SFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                                   KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  my_SFT,
   //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+-----|
-                                          my_ALT, my_CTRL,  my_SPC,              my_ENT, OSL(_WM), my_ALT
+                                          my_ALT, my_CTRL,  my_SPC,              my_ENT, OSL(_WM), KC_LALT
                                       //`--------------------------'             `--------------------------'
 
   ),
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
   //|--------+--------+--------+--------+--------+--------|                            |--------+--------+--------+--------+--------+--------|
        KC_LCTL, KC_LBRC, KC_RBRC, KC_LPRN, KC_RPRN, KC_PIPE,   KC_T,            KC_T,     XXXXXXX, XXXXXXX, KC_UP,  XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                            |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, KC_BSLS,                              XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
+      KC_LSFT, KC_TILD, XXXXXXX, KC_LCBR, KC_RCBR, KC_BSLS,                              XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|          |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, _______,  KC_SPC,           KC_ENT,   MO(3), KC_RALT
                                       //`--------------------------'          `--------------------------'
