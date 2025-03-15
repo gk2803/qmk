@@ -11,13 +11,10 @@
 #define my_CTRL OSM(MOD_LCTL | MOD_RCTL)
 #define my_SFT OSM(MOD_LSFT | MOD_RSFT)
 #define my_ALT OSM(MOD_LALT | MOD_RALT)
+/* #define hrm_GUI LGUI_T(KC_QUOT) */
 
-/*
-  Layer Tap (LT): LT(layer, KC), layer on hold, KC on tap
-https://docs.qmk.fm/feature_layers
-*/
-/* #define my_SPC LT(_SYM, KC_SPC) */
-/* #define my_ENT LT(_NUM, KC_ENT) */
+#define SCLN_TL LT(_WM, KC_SCLN)
+
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
@@ -26,14 +23,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
   //,-------------------------------------------------------------.           ,-----------------------------------------------------------.
      KC_ESC,     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_PGUP,         KC_CAPS,       KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,    KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                            |--------+--------+--------+--------+--------+--------|
-     KC_TAB ,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_PGDN,          KC_T,         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+     KC_TAB ,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_PGDN,          KC_T,         KC_H,    KC_J,    KC_K,    KC_L, SCLN_TL, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                            |--------+--------+--------+--------+--------+--------|
      my_SFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                                   KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  my_SFT,
   //|--------+--------+--------+--------+--------+--------+--------|             |--------+--------+--------+--------+--------+--------+-----|
-                                          MO(_SYM), my_CTRL,  KC_SPC,              KC_ENT, KC_LALT, MO(_NUM)
+                                        MO(_SYM), my_CTRL,  KC_SPC,              KC_ENT, KC_LALT, MO(_NUM)
                                       //`--------------------------'             `--------------------------'
 
-  ),
+  ), 
 
     [_NUM] = LAYOUT_split_3x6_3_ex2(
   //,-------------------------------------------------------------.            ,-------------------------------------------------------------.
@@ -100,4 +97,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true;  // Tap = Normal OSL behavior
     }
     return true;  // Let other keys behave normally
-}   
+}
+
